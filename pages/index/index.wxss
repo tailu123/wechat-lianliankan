@@ -1,0 +1,211 @@
+.container {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.score {
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+}
+
+.music-control {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.music-control image {
+  width: 100%;
+  height: 100%;
+}
+
+.grid {
+  position: relative;
+  border: 2rpx solid #ccc;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+}
+
+.block {
+  width: 80rpx;
+  height: 80rpx;
+  border: 2rpx solid #fff;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.block.selected {
+  transform: scale(0.9);
+  border: 4rpx solid #333;
+}
+
+.block.matched {
+  animation: match-animation 0.5s ease-out forwards;
+}
+
+@keyframes match-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.block.empty {
+  background-color: transparent;
+}
+
+.block-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.restart-btn {
+  margin-top: 30rpx;
+  background-color: #4ECDC4;
+  color: white;
+}
+
+.path-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.path-point {
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #ff3333;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: path-point-animation 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes path-point-animation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.path-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.hint-btn {
+  position: relative;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.hint-btn image {
+  width: 100%;
+  height: 100%;
+}
+
+.hint-btn text {
+  position: absolute;
+  right: -10rpx;
+  top: -10rpx;
+  background: #ff3333;
+  color: white;
+  border-radius: 50%;
+  min-width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  font-size: 24rpx;
+  padding: 0 4rpx;
+}
+
+.timer {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.block.hinting {
+  animation: hint-animation 1s ease-in-out infinite;
+}
+
+@keyframes hint-animation {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20rpx rgba(255, 215, 0, 0.6);
+  }
+}
+
+.level-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.level-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.level-progress {
+  display: flex;
+  gap: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+}

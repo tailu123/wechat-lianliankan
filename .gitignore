@@ -1,0 +1,29 @@
+# 微信开发者工具本地配置
+project.config.json
+project.private.config.json
+
+# node 依赖
+node_modules/
+
+# 编译产物
+miniprogram_npm/
+dist/
+
+# 系统文件
+.DS_Store
+*/.DS_Store
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 编辑器配置
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw* 

@@ -1,0 +1,48 @@
+<view class="container">
+  <view class="header">
+    <view class="level-info">
+      <text class="level-text">第{{currentLevel}}关</text>
+      <view class="level-progress">
+        <text>目标: {{targetScore}}</text>
+        <text>剩余时间: {{timeLimit}}</text>
+      </view>
+    </view>
+    <view class="score">得分: {{score}}</view>
+    <view class="timer">{{time}}</view>
+    <view class="controls">
+      <view class="hint-btn" bindtap="showHint">
+        <image src="{{RESOURCES.IMAGES.HINT}}" mode="aspectFit" />
+        <text>{{hintCount}}</text>
+      </view>
+      <view class="music-control" bindtap="toggleBgm">
+        <image src="{{isBgmPlaying ? musicOnIcon : musicOffIcon}}" mode="aspectFit" />
+      </view>
+    </view>
+  </view>
+  
+  <view class="grid">
+    <path-line path="{{pathPoints}}" blockSize="80" />
+    
+    <block wx:for="{{grid}}" wx:for-item="row" wx:for-index="rowIndex" wx:key="rowIndex">
+      <view class="row">
+        <block wx:for="{{row}}" wx:for-item="block" wx:for-index="colIndex" wx:key="colIndex">
+          <view 
+            class="block {{block ? (block.isSelected ? 'selected' : '') : 'empty'}}"
+            data-row="{{rowIndex}}"
+            data-col="{{colIndex}}"
+            bindtap="tapBlock"
+          >
+            <image 
+              wx:if="{{block}}"
+              class="block-image"
+              src="{{blockImages[block.color]}}"
+              mode="aspectFit"
+            />
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+
+  <button class="restart-btn" bindtap="restartGame">重新开始</button>
+</view>

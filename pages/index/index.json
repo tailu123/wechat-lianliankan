@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "path-line": "/components/PathLine/PathLine"
+  }
+}

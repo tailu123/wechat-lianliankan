@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="title">GridGenerator 测试结果</view>
+  <view class="results">
+    <text>{{testResults}}</text>
+  </view>
+</view>

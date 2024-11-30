@@ -1,0 +1,8 @@
+<view class="path-container">
+  <view 
+    wx:for="{{lines}}" 
+    wx:key="index"
+    class="line"
+    style="left:{{item.left}}rpx; top:{{item.top}}rpx; width:{{item.width}}rpx; transform:{{item.transform}}; animation-delay:{{item.delay}}ms;"
+  ></view>
+</view> 

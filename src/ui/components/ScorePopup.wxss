@@ -1,0 +1,26 @@
+.score-popup {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #ff3333;
+  font-size: 36rpx;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: 0 0 4rpx rgba(255,255,255,0.8);
+  animation: score-popup 1s ease-out forwards;
+}
+
+@keyframes score-popup {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -100%) scale(1);
+  }
+} 

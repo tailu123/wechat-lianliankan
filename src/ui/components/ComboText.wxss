@@ -1,0 +1,36 @@
+.combo-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #ff3333;
+  text-shadow: 0 0 10rpx rgba(255,255,255,0.8);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.combo-text.visible {
+  animation: combo-text 1s ease-out forwards;
+}
+
+@keyframes combo-text {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+} 

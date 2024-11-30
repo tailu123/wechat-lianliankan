@@ -1,0 +1,34 @@
+.container {
+  padding: 20rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.results {
+  background: #f8f9fa;
+  padding: 30rpx;
+  border-radius: 12rpx;
+  white-space: pre-wrap;
+  font-family: monospace;
+  line-height: 1.5;
+  font-size: 28rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 添加一些颜色标记 */
+text {
+  color: #333;
+}
+
+.results text:global([data-mark="✓"]) {
+  color: #28a745;
+}
+
+.results text:global([data-mark="✗"]) {
+  color: #dc3545;
+}
