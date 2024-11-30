@@ -6,7 +6,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "趣味消消乐",
+    "navigationBarTitleText": "趣味连连看",
     "navigationBarTextStyle": "black"
   },
   "requiredBackgroundModes": ["audio"],

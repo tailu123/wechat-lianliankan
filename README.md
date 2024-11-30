@@ -1,6 +1,6 @@
-# 趣味消消乐小游戏
+# 趣味连连看小游戏 (WeChat Lianliankan)
 
-一个基于微信小程序的消消乐游戏，具有以下特点：
+一个基于微信小程序开发的现代连连看游戏，具有精美的界面设计和流畅的游戏体验。
 
 ## 功能特点
 
@@ -51,4 +51,4 @@ git clone [repository-url]
 
 ## 贡献
 
-欢迎提交 Issue 和 Pull Request 
+欢迎提交 Issue 和 Pull Request

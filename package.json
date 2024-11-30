@@ -1,0 +1,19 @@
+{
+  "name": "wechat-lianliankan",
+  "version": "1.0.0",
+  "description": "趣味连连看小游戏 - 基于微信小程序开发的休闲益智游戏",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "微信小程序",
+    "小游戏",
+    "连连看",
+    "休闲游戏",
+    "益智游戏"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+} 
